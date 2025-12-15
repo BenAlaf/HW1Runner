@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="96dp"
+    android:viewportWidth="64"
+    android:viewportHeight="96">
+
+    <!-- Car body shadow/glow -->
+    <path
+        android:fillColor="#33FF00FF"
+        android:pathData="M12,24 L52,24 L56,44 L56,80 L52,88 L12,88 L8,80 L8,44 Z"/>
+
+    <!-- Main car body - Magenta -->
+    <path
+        android:fillColor="@color/neon_magenta"
+        android:pathData="M14,26 L50,26 L54,44 L54,78 L50,86 L14,86 L10,78 L10,44 Z"/>
+
+    <!-- Windshield (at bottom since car faces us) -->
+    <path
+        android:fillColor="#330033"
+        android:pathData="M14,60 L50,60 L46,78 L18,78 Z"/>
+
+    <!-- Windshield shine -->
+    <path
+        android:fillColor="#22FFFFFF"
+        android:pathData="M16,62 L36,62 L34,74 L20,74 Z"/>
+
+    <!-- Hood (top in our view) -->
+    <path
+        android:strokeColor="#AA0088"
+        android:strokeWidth="1.5"
+        android:pathData="M32,30 L32,52"/>
+    <path
+        android:strokeColor="#AA0088"
+        android:strokeWidth="1"
+        android:pathData="M24,32 L24,50"/>
+    <path
+        android:strokeColor="#AA0088"
+        android:strokeWidth="1"
+        android:pathData="M40,32 L40,50"/>
+
+    <!-- Headlights facing player (at bottom) -->
+    <path
+        android:fillColor="#FFFF00"
+        android:pathData="M14,76 L22,76 L22,82 L14,82 Z"/>
+    <path
+        android:fillColor="#FFFF00"
+        android:pathData="M42,76 L50,76 L50,82 L42,82 Z"/>
+
+    <!-- Rear lights (top) -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M14,28 L20,28 L20,32 L14,32 Z"/>
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M44,28 L50,28 L50,32 L44,32 Z"/>
+
+    <!-- Side mirrors -->
+    <path
+        android:fillColor="@color/neon_magenta"
+        android:pathData="M6,62 L10,60 L10,68 L6,66 Z"/>
+    <path
+        android:fillColor="@color/neon_magenta"
+        android:pathData="M58,62 L54,60 L54,68 L58,66 Z"/>
+
+    <!-- Wheels -->
+    <path
+        android:fillColor="#222222"
+        android:pathData="M8,34 L14,34 L14,42 L8,42 Z"/>
+    <path
+        android:fillColor="#222222"
+        android:pathData="M50,34 L56,34 L56,42 L50,42 Z"/>
+    <path
+        android:fillColor="#222222"
+        android:pathData="M8,66 L14,66 L14,76 L8,76 Z"/>
+    <path
+        android:fillColor="#222222"
+        android:pathData="M50,66 L56,66 L56,76 L50,76 Z"/>
+
+    <!-- Wheel rims -->
+    <path
+        android:fillColor="#FF00AA"
+        android:pathData="M10,36 L12,36 L12,40 L10,40 Z"/>
+    <path
+        android:fillColor="#FF00AA"
+        android:pathData="M52,36 L54,36 L54,40 L52,40 Z"/>
+    <path
+        android:fillColor="#FF00AA"
+        android:pathData="M10,68 L12,68 L12,74 L10,74 Z"/>
+    <path
+        android:fillColor="#FF00AA"
+        android:pathData="M52,68 L54,68 L54,74 L52,74 Z"/>
+
+    <!-- Neon underglow -->
+    <path
+        android:fillColor="#55FF00FF"
+        android:pathData="M16,86 L48,86 L50,90 L14,90 Z"/>
+</vector>
+

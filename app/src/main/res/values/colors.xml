@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cyberpunk/Synthwave Theme -->
+    <color name="colorPrimary">#1A0A2E</color>
+    <color name="colorPrimaryDark">#0D0517</color>
+    <color name="colorAccent">#FF00FF</color>
+
+    <!-- Neon Colors -->
+    <color name="neon_cyan">#00FFFF</color>
+    <color name="neon_magenta">#FF00FF</color>
+    <color name="neon_purple">#BF00FF</color>
+    <color name="neon_pink">#FF1493</color>
+    <color name="neon_orange">#FF6B00</color>
+    <color name="neon_yellow">#FFE500</color>
+    <color name="neon_green">#39FF14</color>
+
+    <!-- Game Colors -->
+    <color name="player_color">#00FFFF</color>
+    <color name="player_glow">#4400FFFF</color>
+    <color name="obstacle_color">#FF00FF</color>
+    <color name="obstacle_truck">#FF6B00</color>
+    <color name="coin_color">#FFE500</color>
+    <color name="lane_color">#66FF00FF</color>
+    <color name="road_line">#AAFFFFFF</color>
+
+    <!-- UI Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="heart_full">#FF1744</color>
+    <color name="heart_empty">#4D4D4D</color>
+    <color name="crash_flash">#88FF0000</color>
+    <color name="score_gold">#FFD700</color>
+
+    <!-- Background Gradient -->
+    <color name="bg_top">#1A0A2E</color>
+    <color name="bg_middle">#16082B</color>
+    <color name="bg_bottom">#0D0517</color>
+</resources>
