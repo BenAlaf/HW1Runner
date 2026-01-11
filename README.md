@@ -106,14 +106,7 @@ The game features a **Cyberpunk/Synthwave** aesthetic:
 | Button Fast | Tap ◀ ▶ buttons | Fixed (fast) |
 | Sensor | Tilt phone left/right | Tilt forward/back |
 
----
 
-## 📦 Installation
-
-1. Clone this repository
-2. Open in Android Studio
-3. Add your Google Maps API key to `AndroidManifest.xml`
-4. Build and run on device/emulator
 
 ---
 
@@ -121,8 +114,4 @@ The game features a **Cyberpunk/Synthwave** aesthetic:
 
 Ben Alaf
 
----
 
-## 📄 License
-
-This project is for educational purposes.
