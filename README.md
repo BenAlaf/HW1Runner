@@ -119,7 +119,7 @@ The game features a **Cyberpunk/Synthwave** aesthetic:
 
 ## 👨‍💻 Author
 
-Built as part of Android Development coursework (HW2)
+Ben Alaf
 
 ---
 
