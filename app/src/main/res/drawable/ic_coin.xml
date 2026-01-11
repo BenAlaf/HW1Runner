@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    
+    <!-- Outer glow -->
+    <path
+        android:pathData="M50,50m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0"
+        android:fillColor="#33FFE500"/>
+    
+    <!-- Coin body -->
+    <path
+        android:pathData="M50,50m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
+        android:fillColor="@color/coin_color"/>
+    
+    <!-- Inner ring -->
+    <path
+        android:pathData="M50,50m-32,0a32,32 0,1 1,64 0a32,32 0,1 1,-64 0"
+        android:strokeWidth="3"
+        android:strokeColor="#FFC107"
+        android:fillColor="@android:color/transparent"/>
+    
+    <!-- Dollar sign or star -->
+    <path
+        android:pathData="M50,28L54,40L67,40L57,48L61,60L50,52L39,60L43,48L33,40L46,40Z"
+        android:fillColor="#FFC107"/>
+    
+    <!-- Highlight -->
+    <path
+        android:pathData="M35,35m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.4"/>
+</vector>

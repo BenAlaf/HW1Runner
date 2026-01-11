@@ -51,29 +51,74 @@
                     android:fontFamily="monospace"/>
             </LinearLayout>
 
-            <!-- High Score Section -->
+            <!-- Coins Section -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:orientation="vertical">
+                android:layout_marginStart="16dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
 
-                <TextView
-                    android:id="@+id/highScoreText"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textSize="20sp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_coin"
+                        android:contentDescription="coins"/>
+
+                    <TextView
+                        android:id="@+id/coinsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/coin_color"
+                        android:shadowColor="@color/coin_color"
+                        android:shadowRadius="6"
+                        android:fontFamily="monospace"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COINS"
+                    android:textSize="10sp"
+                    android:textColor="#88FFFFFF"
+                    android:letterSpacing="0.3"
+                    android:fontFamily="monospace"/>
+            </LinearLayout>
+
+            <!-- Odometer Section -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/odometerText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0m"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="@color/score_gold"
-                    android:shadowColor="@color/score_gold"
+                    android:textColor="@color/neon_green"
+                    android:shadowColor="@color/neon_green"
                     android:shadowRadius="6"
                     android:fontFamily="monospace"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="BEST"
+                    android:text="DISTANCE"
                     android:textSize="10sp"
                     android:textColor="#88FFFFFF"
                     android:letterSpacing="0.3"
@@ -118,12 +163,41 @@
             </LinearLayout>
         </LinearLayout>
 
+        <!-- High Score Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BEST: "
+                android:textSize="12sp"
+                android:textColor="#88FFFFFF"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/highScoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/score_gold"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
         <!-- GAME AREA -->
         <FrameLayout
             android:id="@+id/gameArea"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:layout_marginTop="8dp"
             android:clipChildren="false">
 
             <!-- Road lane container (for animated dashes) -->
@@ -132,13 +206,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 
-            <!-- Lane separators (neon glow lines) -->
+            <!-- Lane separators for 5 lanes (4 separators) -->
             <View
                 android:id="@+id/laneSep1"
                 android:layout_width="3dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:translationX="-100dp"
+                android:translationX="-150dp"
                 android:background="@color/lane_color"
                 android:alpha="0.4"/>
 
@@ -147,7 +221,25 @@
                 android:layout_width="3dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
-                android:translationX="100dp"
+                android:translationX="-50dp"
+                android:background="@color/lane_color"
+                android:alpha="0.4"/>
+
+            <View
+                android:id="@+id/laneSep3"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:translationX="50dp"
+                android:background="@color/lane_color"
+                android:alpha="0.4"/>
+
+            <View
+                android:id="@+id/laneSep4"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:translationX="150dp"
                 android:background="@color/lane_color"
                 android:alpha="0.4"/>
 
@@ -155,6 +247,7 @@
 
         <!-- CONTROLS -->
         <LinearLayout
+            android:id="@+id/controlsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
@@ -201,6 +294,19 @@
                     android:shadowRadius="12"/>
             </FrameLayout>
         </LinearLayout>
+
+        <!-- Sensor Mode Indicator (hidden when using buttons) -->
+        <TextView
+            android:id="@+id/sensorModeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="📱 TILT TO STEER"
+            android:textSize="14sp"
+            android:textColor="@color/neon_cyan"
+            android:fontFamily="monospace"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp"/>
 
     </LinearLayout>
 
@@ -253,6 +359,26 @@
                 android:textColor="@color/neon_cyan"
                 android:shadowColor="@color/neon_cyan"
                 android:shadowRadius="8"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/finalCoinsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Coins: 0"
+                android:textSize="18sp"
+                android:textColor="@color/coin_color"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/finalDistanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Distance: 0m"
+                android:textSize="16sp"
+                android:textColor="@color/neon_green"
                 android:fontFamily="monospace"/>
 
             <TextView

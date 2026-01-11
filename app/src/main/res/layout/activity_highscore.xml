@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_road_gradient">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <FrameLayout
+            android:id="@+id/backBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_control_bg"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="←"
+                android:textSize="24sp"
+                android:textColor="@color/neon_cyan"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:text="🏆 TOP 10 SCORES"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/score_gold"
+            android:shadowColor="@color/score_gold"
+            android:shadowRadius="12"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
+    <!-- Score Table Fragment Container -->
+    <FrameLayout
+        android:id="@+id/scoreTableContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"/>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/lane_color"
+        android:layout_marginHorizontal="16dp"/>
+
+    <!-- Map Label -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="📍 SCORE LOCATION"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/neon_cyan"
+        android:fontFamily="monospace"
+        android:gravity="center"/>
+
+    <!-- Map Fragment Container -->
+    <FrameLayout
+        android:id="@+id/mapContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:background="#22FFFFFF"/>
+
+</LinearLayout>

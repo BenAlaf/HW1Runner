@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_road_gradient">
+
+    <!-- Animated Background Elements -->
+    <View
+        android:id="@+id/bgLine1"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="60dp"
+        android:background="@color/lane_color"
+        android:alpha="0.3"/>
+
+    <View
+        android:id="@+id/bgLine2"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="60dp"
+        android:layout_gravity="end"
+        android:background="@color/lane_color"
+        android:alpha="0.3"/>
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
+
+        <!-- Title Section -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="48dp">
+
+            <!-- Car Icon -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_car"
+                android:contentDescription="car"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CYBER"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="@color/neon_cyan"
+                android:shadowColor="@color/neon_cyan"
+                android:shadowRadius="20"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUNNER"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="@color/neon_magenta"
+                android:shadowColor="@color/neon_magenta"
+                android:shadowRadius="20"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.3"
+                android:layout_marginTop="-12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SELECT GAME MODE"
+                android:textSize="14sp"
+                android:textColor="#88FFFFFF"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.2"
+                android:layout_marginTop="24dp"/>
+        </LinearLayout>
+
+        <!-- Game Mode Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Button Mode - Slow -->
+            <FrameLayout
+                android:id="@+id/btnButtonSlow"
+                android:layout_width="280dp"
+                android:layout_height="64dp"
+                android:background="@drawable/btn_menu"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎮"
+                        android:textSize="24sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BUTTONS - SLOW"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/neon_magenta"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Relaxed pace, tap controls"
+                            android:textSize="10sp"
+                            android:textColor="#88FFFFFF"
+                            android:fontFamily="monospace"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Button Mode - Fast -->
+            <FrameLayout
+                android:id="@+id/btnButtonFast"
+                android:layout_width="280dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_menu"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚡"
+                        android:textSize="24sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BUTTONS - FAST"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/neon_magenta"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Intense speed, tap controls"
+                            android:textSize="10sp"
+                            android:textColor="#88FFFFFF"
+                            android:fontFamily="monospace"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Sensor Mode -->
+            <FrameLayout
+                android:id="@+id/btnSensorMode"
+                android:layout_width="280dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/btn_menu_sensor"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📱"
+                        android:textSize="24sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SENSOR MODE"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/neon_cyan"
+                            android:fontFamily="monospace"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tilt to steer &amp; control speed"
+                            android:textSize="10sp"
+                            android:textColor="#88FFFFFF"
+                            android:fontFamily="monospace"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="32dp"/>
+
+        <!-- Highscore Button -->
+        <FrameLayout
+            android:id="@+id/btnHighscores"
+            android:layout_width="200dp"
+            android:layout_height="52dp"
+            android:background="@drawable/btn_highscore"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏆"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="HIGHSCORES"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/score_gold"
+                    android:fontFamily="monospace"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Current High Score Display -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BEST: "
+                android:textSize="14sp"
+                android:textColor="#88FFFFFF"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:id="@+id/highScoreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/score_gold"
+                android:shadowColor="@color/score_gold"
+                android:shadowRadius="8"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
